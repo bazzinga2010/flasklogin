@@ -1,0 +1,28 @@
+body {
+	background-color: #f2f2f2;
+}
+.logindiv {
+	float: center;
+	padding-left: 520px;
+	padding-top: 100px;
+
+
+}
+.logindiv .loginform .logintable {
+	background-color: white;
+	font-size: 18;
+	
+	
+
+}
+
+.logindiv .loginform .logintable tr td {
+	font-size: 20px;
+	border-color: black;
+}
+.loginerror{
+
+	font-size: 40px;
+	text-align: center;
+	color: red;
+}

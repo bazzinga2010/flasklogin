@@ -1,0 +1,27 @@
+{%extends 'index.html'%}
+{%block body%}
+
+<div class="loginerror">
+{{error}}
+<!-- {%if current_user.is_authenticated==False%}
+<p>you have to first login to access home page</p>
+{%endif%} -->
+{{loginwarning}}
+</div>
+<div class="logindiv">
+	
+	<form action="/login" method="POST" class="loginform">
+		{{ form.hidden_tag() }}
+		<h1>Login</h1>
+		<table class="logintable">
+		
+		<tr><br><td>{{form.username.label}}</td><td>{{form.username(autocomplete="off")}}</td></tr>
+		<tr><br><td>{{form.password.label}}</td><td>{{form.password(autocomplete="off")}}</td></tr>
+		<tr><br><td>{{form.remember.label}}</td><td>{{form.remember(autocomplete="off")}}</td></tr>
+		<tr><td></td><td>{{form.submit}}</td></tr>
+
+	   
+	</table>
+	</form>
+</div>
+{%endblock%}

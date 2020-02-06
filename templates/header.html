@@ -1,0 +1,102 @@
+
+<nav class="header-wrapper">
+	<div class="nav1">
+		<ul>
+			<li><a href="{{ url_for('home') }}">Home</a></li>
+			{% if current_user.is_authenticated %}
+				<li><a href="{{ url_for('logout') }}">Logout</a></li>
+			{%else%}
+				<li><a href="{{ url_for('register') }}">Register</a></li>
+				<li><a href="{{ url_for('login') }}">Login</a></li>
+			{%endif%}
+			
+		</ul>
+		</div>
+		<div class="form-div">
+			<!-- <form class="login-form">
+				<input type="text" name="name" placeholder="username" autocomplete="off">
+				<input type="password" name="password" placeholder="password">
+				<button name="submit">submit</button>
+				
+			</form> -->
+			<a href="{{ url_for('about') }}">about</a>
+		
+	</div>
+</nav>
+<style type="text/css">
+	 * {
+	 margin: 0;
+	 padding: 0;
+	 box-sizing: border-box;
+	 }
+	a {
+		text-decoration: none;
+		color: black;
+		font-family: arial;
+		font-size: 25px;
+		padding: 25px;
+
+	}
+	.header-wrapper {
+		background-color: blue;
+		margin: 0 auto;
+		padding: 0px;
+		height: 100px;
+		width: 100%;
+	}
+	
+	.header-wrapper .nav1 {
+		float: left;
+		padding-left: 30px;
+		padding-top: 10px;
+	}
+	.header-wrapper .nav1 ul {
+		float: left;
+		padding: 8px 100px; 
+		
+	}
+	.header-wrapper .nav1 ul li {
+		
+		display: inline-block;
+	}
+	.header-wrapper .form-div {
+		float: right;
+		padding-top: 10px;
+	}
+	.header-wrapper .form-div .login-form {
+		float: left;
+		padding-top: 23px;
+		padding-right: 20px;
+	}
+	.header-wrapper .form-div .login-form input {
+		width: 150px;
+		height: 30px;
+		padding-top: 0px 10px;
+		margin-right: 10px;
+		border: none;
+		line-height: 30px;
+		
+	}
+	.header-wrapper .form-div .login-form button {
+		width: 60px;
+		height: 30px;
+		padding-top: 0px 10px;
+		padding-right: 20px;
+		margin-right: 15px;
+		background-color: #f3f3f3;
+		cursor: pointer;
+
+	}
+	.header-wrapper .form-div .login-form button:hover {
+		
+		background-color: blue;
+	}
+	.header-wrapper .form-div a {
+		float: left;
+		padding-right: 35px;
+	}
+	
+
+
+</style>
+

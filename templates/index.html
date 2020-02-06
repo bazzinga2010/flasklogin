@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{%if title%}
+	<title>title-{{title}}</title>
+	{%else%}
+	<title>Login System</title>
+	{%endif%}
+	
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/main.css') }}">
+</head>
+<body>
+	{%include 'header.html'%}
+
+	{%block body%}{%endblock%}
+	
+	
+
+</body>
+
+</body>
+</html>

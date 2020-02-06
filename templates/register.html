@@ -1,0 +1,36 @@
+{%extends 'index.html'%}
+{%block body%}
+<div class="registererror">
+	{% for error in form.firstname.errors %}
+     <div> {{ error }} </div>
+	{%endfor%}
+	{% for error in form.lastname.errors %}
+     <div> {{ error }} </div>
+	{%endfor%}
+	{% for error in form.username.errors %}
+     <div> {{ error }} </div>
+	{%endfor%}
+	{% for error in form.password.errors %}
+     <div> {{ error }} </div>
+	{%endfor%}
+	{% for error in form.confirm.errorrs %}
+	<div> {{ error }}</div>
+	{%endfor%}
+</div>
+<div class="logindiv">
+
+<form method="post" action="" class="loginform">
+	{{ form.hidden_tag() }}
+	<h1>Registration Form</h1>
+	
+	<table class="logintable">
+		<tr><td>{{form.firstname.label}}</td><td>{{form.firstname(autocomplete="off")}}</td></tr>
+		<tr><td>{{form.lastname.label}}</td><td>{{form.lastname(autocomplete="off")}}</td></tr>
+		<tr><td>{{form.username.label}}</td><td>{{form.username(autocomplete="off")}}</td></tr>
+		<tr><td>{{form.password.label}}</td><td>{{form.password(autocomplete="off")}}</td></tr>
+		<tr><td>{{form.confirm.label}}</td><td>{{form.confirm(autocomplete="off")}}</td></tr>
+		<tr><td></td><td>{{form.submit}}</td></tr>
+	</table>
+</form>
+</div>
+{%endblock%}
